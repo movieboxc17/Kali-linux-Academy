@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Linux Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="kali-logo.png" alt="Kali Linux Logo">
+            <span>Kali Linux Academy</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#commands">Commands</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li class="discord-btn"><a href="https://discord.gg/kaliacademy" target="_blank"><i class="fab fa-discord"></i> Join Discord</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Master Kali Linux</h1>
+            <p>Learn ethical hacking and penetration testing with our comprehensive tutorials</p>
+            <a href="#tools" class="btn primary-btn">Explore Tools</a>
+            <a href="#commands" class="btn secondary-btn">Learn Commands</a>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools-section">
+        <h2>Kali Linux Tools</h2>
+        <p class="section-description">Discover the powerful tools included in Kali Linux and learn how to use them effectively.</p>
+        
+        <div class="tools-grid">
+            <div class="tool-card">
+                <i class="fas fa-wifi"></i>
+                <h3>Network Scanning</h3>
+                <ul>
+                    <li><a href="#nmap">Nmap</a></li>
+                    <li><a href="#wireshark">Wireshark</a></li>
+                    <li><a href="#aircrack-ng">Aircrack-ng</a></li>
+                </ul>
+            </div>
+            
+            <div class="tool-card">
+                <i class="fas fa-bug"></i>
+                <h3>Vulnerability Analysis</h3>
+                <ul>
+                    <li><a href="#nikto">Nikto</a></li>
+                    <li><a href="#sqlmap">SQLmap</a></li>
+                    <li><a href="#openvas">OpenVAS</a></li>
+                </ul>
+            </div>
+            
+            <div class="tool-card">
+                <i class="fas fa-key"></i>
+                <h3>Password Attacks</h3>
+                <ul>
+                    <li><a href="#hydra">Hydra</a></li>
+                    <li><a href="#john">John the Ripper</a></li>
+                    <li><a href="#hashcat">Hashcat</a></li>
+                </ul>
+            </div>
+            
+            <div class="tool-card">
+                <i class="fas fa-user-secret"></i>
+                <h3>Exploitation</h3>
+                <ul>
+                    <li><a href="#metasploit">Metasploit</a></li>
+                    <li><a href="#burpsuite">Burp Suite</a></li>
+                    <li><a href="#beef">BeEF</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Detail Section (Example) -->
+    <section id="nmap" class="tool-detail">
+        <h2>Nmap (Network Mapper)</h2>
+        <div class="tool-content">
+            <div class="tool-description">
+                <p>Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing. It uses raw IP packets in novel ways to determine what hosts are available on the network, what services those hosts are offering, what operating systems they are running, and dozens of other characteristics.</p>
+                
+                <h3>Basic Usage</h3>
+                <div class="command-example">
+                    <pre><code>nmap 192.168.1.1</code></pre>
+                    <p>Scans a single IP address</p>
+                </div>
+                
+                <div class="command-example">
+                    <pre><code>nmap 192.168.1.0/24</code></pre>
+                    <p>Scans an entire subnet</p>
+                </div>
+                
+                <div class="command-example">
+                    <pre><code>nmap -p 1-100 192.168.1.1</code></pre>
+                    <p>Scans ports 1-100 on the target</p>
+                </div>
+                
+                <h3>Advanced Options</h3>
+                <div class="command-example">
+                    <pre><code>nmap -sV -sC -O -p- 192.168.1.1</code></pre>
+                    <p>Performs a comprehensive scan with service detection (-sV), default scripts (-sC), OS detection (-O), and scans all ports (-p-)</p>
+                </div>
+            </div>
+            <div class="tool-image">
+                <img src="nmap-screenshot.png" alt="Nmap in action">
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="commands-section">
+        <h2>Essential Kali Linux Commands</h2>
+        <p class="section-description">Master the command line with these essential Kali Linux commands.</p>
+        
+        <div class="commands-container">
+            <div class="command-category">
+                <h3>File System Navigation</h3>
+                <div class="command-item">
+                    <code>ls</code>
+                    <p>List directory contents</p>
+                </div>
+                <div class="command-item">
+                    <code>cd [directory]</code>
+                    <p>Change directory</p>
+                </div>
+                <div class="command-item">
+                    <code>pwd</code>
+                    <p>Print working directory</p>
+                </div>
+                <div class="command-item">
+                    <code>find / -name [filename]</code>
+                    <p>Find files in the system</p>
+                </div>
+            </div>
+            
+            <div class="command-category">
+                <h3>File Manipulation</h3>
+                <div class="command-item">
+                    <code>cat [file]</code>
+                    <p>Display file contents</p>
+                </div>
+                <div class="command-item">
+                    <code>grep [pattern] [file]</code>
+                    <p>Search for patterns in files</p>
+                </div>
+                <div class="command-item">
+                    <code>cp [source] [destination]</code>
+                    <p>Copy files or directories</p>
+                </div>
+                <div class="command-item">
+                    <code>mv [source] [destination]</code>
+                    <p>Move or rename files</p>
+                </div>
+            </div>
+            
+            <div class="command-category">
+                <h3>Network Commands</h3>
+                <div class="command-item">
+                    <code>ifconfig</code>
+                    <p>Display network interfaces</p>
+                </div>
+                <div class="command-item">
+                    <code>ping [host]</code>
+                    <p>Test network connectivity</p>
+                </div>
+                <div class="command-item">
+                    <code>netstat -tuln</code>
+                    <p>Display network connections</p>
+                </div>
+                <div class="command-item">
+                    <code>traceroute [host]</code>
+                    <p>Trace route to host</p>
+                </div>
+            </div>
+            
+            <div class="command-category">
+                <h3>System Information</h3>
+                <div class="command-item">
+                    <code>uname -a</code>
+                    <p>Display system information</p>
+                </div>
+                <div class="command-item">
+                    <code>top</code>
+                    <p>Display running processes</p>
+                </div>
+                <div class="command-item">
+                    <code>df -h</code>
+                    <p>Show disk usage</p>
+                </div>
+                <div class="command-item">
+                    <code>free -m</code>
+                    <p>Show memory usage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials" class="tutorials-section">
+        <h2>Step-by-Step Tutorials</h2>
+        <p class="section-description">Follow our detailed tutorials to master penetration testing with Kali Linux.</p>
+        
+        <div class="tutorials-grid">
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="network-scan.jpg" alt="Network Scanning">
+                </div>
+                <div class="tutorial-content">
+                    <h3>Network Scanning Tutorial</h3>
+                    <p>Learn how to scan and enumerate networks using Kali Linux tools.</p>
+                    <a href="#" class="btn">Start Tutorial</a>
+                </div>
+            </div>
+            
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="web-pentest.jpg" alt="Web Application Pentesting">
+                </div>
+                <div class="tutorial-content">
+                    <h3>Web Application Pentesting</h3>
+                    <p>Discover common web vulnerabilities and how to exploit them ethically.</p>
+                    <a href="#" class="btn">Start Tutorial</a>
+                </div>
+            </div>
+            
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="wireless-hacking.jpg" alt="Wireless Network Hacking">
+                </div>
+                <div class="tutorial-content">
+                    <h3>Wireless Network Security</h3>
+                    <p>Learn how to test the security of wireless networks using Kali Linux.</p>
+                    <a href="#" class="btn">Start Tutorial</a>
+                </div>
+            </div>
+            
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="social-engineering.jpg" alt="Social Engineering">
+                </div>
+                <div class="tutorial-content">
+                    <h3>Social Engineering Toolkit</h3>
+                    <p>Master the art of social engineering using Kali Linux tools.</p>
+                    <a href="#" class="btn">Start Tutorial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <h2>Additional Resources</h2>
+        <p class="section-description">Expand your knowledge with these valuable resources.</p>
+        
+        <div class="resources-container">
+            <div class="resource-item">
+                <i class="fas fa-book"></i>
+                <h3>Books</h3>
+                <ul>
+                    <li>Kali Linux Revealed</li>
+                    <li>Penetration Testing: A Hands-On Introduction</li>
+                    <li>The Hacker Playbook 3</li>
+                </ul>
+            </div>
+            
+            <div class="resource-item">
+                <i class="fas fa-video"></i>
+                <h3>Online Courses</h3>
+                <ul>
+                    <li>Offensive Security Certified Professional (OSCP)</li>
+                    <li>Penetration Testing with Kali Linux</li>
+                    <li>Ethical Hacking with Kali Linux</li>
+                </ul>
+            </div>
+            
+            <div class="resource-item">
+                <i class="fas fa-globe"></i>
+                <h3>Websites</h3>
+                <ul>
+                    <li>Kali Linux Official Documentation</li>
+                    <li>Hack The Box</li>
+                    <li>TryHackMe</li>
+                </ul>
+            </div>
+            
+            <div class="resource-item">
+                <i class="fas fa-users"></i>
+                <h3>Communities</h3>
+                <ul>
+                    <li>Kali Linux Forums</li>
+                    <li>Reddit r/kalilinux</li>
+                    <li>Our Discord Community</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="kali-logo.png" alt="Kali Linux Logo">
+                <span>Kali Linux Academy</span>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#commands">Commands</a></li>
+                    <li><a href="#tutorials">Tutorials</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest tutorials and resources.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                                        <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Kali Linux Academy. All rights reserved. For educational purposes only.</p>
+            <p>Disclaimer: Always practice ethical hacking and get proper authorization before testing.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
